@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="Songozz">
 <meta property="og:description" content="Python函数中*和**的内涵 函数定义时  使用单个*会将所有的参数，放入一个元组（tuple）供函数使用。 使用两个**会将所有的关键字参数放入一个字典（dict）供函数使用。   函数调用时  在list,tuple,set前加一个星号会把容器中的所有元素解包（unpack）变成位置参数。   在dict前加一个星号会把字典的键变成位置参数。  在dict前加两个星号会把字典的键值对变成关">
 <meta property="article:published_time" content="2020-07-05T03:07:00.926Z">
-<meta property="article:modified_time" content="2020-07-05T03:40:32.435Z">
+<meta property="article:modified_time" content="2020-07-05T04:07:58.911Z">
 <meta property="article:author" content="Songo">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
@@ -358,9 +358,9 @@
 <li>Extended Iterable Unpacking 扩展迭代解包</li>
 </ol>
 <h3 id="仅关键字参数"><a href="#仅关键字参数" class="headerlink" title="仅关键字参数"></a>仅关键字参数</h3><p>在<code>*args</code>后加入关键字参数，就可以要求这个参数必须以关键字的方式赋值。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">keyword_only</span><span class="params">(a, *args, b)</span>:</span></span><br><span class="line">	<span class="keyword">print</span>[a, args, b]</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">keyword_only</span><span class="params">(a, *args, b)</span>:</span></span><br><span class="line">	print(a, args, b)</span><br></pre></td></tr></table></figure>
 <p>在调用的时候，必须用关键字的方式赋值。单个星号<code>*</code>也有相同作用，只不过不能接受无限位置参数了。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">keyword_only</span><span class="params">(a, * , b)</span>:</span></span><br><span class="line">	<span class="keyword">print</span>[a, args, b]</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">keyword_only</span><span class="params">(a, * , b)</span>:</span></span><br><span class="line">	print(a, args, b)</span><br></pre></td></tr></table></figure>
 <h3 id="扩展迭代解包"><a href="#扩展迭代解包" class="headerlink" title="扩展迭代解包"></a>扩展迭代解包</h3><p>许多算法要求以<code>第一个元素</code>和<code>剩下的全部</code>这种方式分割一个序列。即</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">first, rest = seq[<span class="number">0</span>], seq[<span class="number">1</span>:]</span><br></pre></td></tr></table></figure>
 <p>现在可以这样：</p>
