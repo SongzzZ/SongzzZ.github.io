@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="Songozz">
 <meta property="og:description" content="为了抠出自己的签名，经常要用到去除背景，这里记一下。 1 调用removebg api最简单粗暴的方法，调用这个python库。 优点：傻瓜式操作，方便快捷，对于小图片生成质量较好。 缺点：对于大图（比如一张表格），背景去除效果不好 步骤如下：  安装 1pip install removebg  使用 先注册一个账号： remove.bg，获取一个api key: API 阅读它的API文档，找">
 <meta property="article:published_time" content="2020-07-08T03:21:26.134Z">
-<meta property="article:modified_time" content="2020-07-08T04:59:09.159Z">
+<meta property="article:modified_time" content="2020-08-01T01:59:47.403Z">
 <meta property="article:author" content="Songo">
 <meta property="article:tag" content="划水日记">
 <meta name="twitter:card" content="summary">
@@ -346,7 +346,7 @@
 </li>
 <li><p>代码示例</p>
 <p> 有关 python 的调用示例可以参考： <a href="https://github.com/brilam/remove-bg" target="_blank" rel="noopener">https://github.com/brilam/remove-bg</a> </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> removebg <span class="keyword">import</span> RemoveBg</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数填入 api key 以及批处理的日志文件位置</span></span><br><span class="line">rmbg = RemoveBg(<span class="string">"wCCYwMbT5hHZHiYK3pcaY2pR"</span>, <span class="string">"./error.log"</span>)</span><br><span class="line"></span><br><span class="line"><span class="string">'''rmbg.remove_background_from_img_file("/home/zhaosong/check.png")'''</span></span><br><span class="line"><span class="comment"># 批处理图片的存放位置</span></span><br><span class="line">path = os.path.join(os.getcwd(), <span class="string">"pic"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> pic <span class="keyword">in</span> os.listdir(path):</span><br><span class="line">    rmbg.remove_background_from_img_file(os.path.join(path, pic))</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> removebg <span class="keyword">import</span> RemoveBg</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数填入 api key 以及批处理的日志文件位置</span></span><br><span class="line">rmbg = RemoveBg(<span class="string">"wCCYwMbT5hHZHiYK3pcaY2pR"</span>, <span class="string">"./error.log"</span>)</span><br><span class="line"><span class="comment"># 单张图片</span></span><br><span class="line"><span class="comment"># rmbg.remove_background_from_img_file("/home/zhaosong/check.png")</span></span><br><span class="line"><span class="comment"># 批处理图片</span></span><br><span class="line">path = os.path.join(os.getcwd(), <span class="string">"pic"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> pic <span class="keyword">in</span> os.listdir(path):</span><br><span class="line">    rmbg.remove_background_from_img_file(os.path.join(path, pic))</span><br></pre></td></tr></table></figure>
 <p>保存的xx_no_bg.png就是最后结果</p>
 </li>
 </ol>
@@ -389,6 +389,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/09/02/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97/" rel="prev" title="日志">
+                日志 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -465,7 +469,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -478,7 +482,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
